@@ -1,22 +1,16 @@
 import {Routes} from '@angular/router';
-import {App} from './app';
-import {NotFound} from '../components/commons/not-found/not-found';
+import {NotFound} from '../components/not-found/not-found';
+import {HomeComponent} from '../components/home-component/home-component';
 
 export const routes: Routes = [
   {
     title: 'Home',
-    path: '/',
-    component: App,
-    // canActivate: [authGuardFn]
+    path: 'home',
+    component: HomeComponent
   },
   {
     title: 'Not found',
-    path: '/222',
-    component: NotFound
-  },
-  {
-    title: 'Not found',
-    path: '',
+    path: '**',
     pathMatch: 'full',
     component: NotFound
   }
